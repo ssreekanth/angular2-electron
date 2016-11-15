@@ -1,4 +1,4 @@
-import {Component, Pipe, PipeTransform} from '@angular/core';
+import {ApplicationRef, Component, Pipe, PipeTransform} from '@angular/core';
 import {NgFor} from '@angular/common';
 
 @Pipe({ name: 'byteFormat'})
@@ -49,7 +49,7 @@ export class AppComponent {
 
   images:Array<Object> = [];
 
-  constructor() {}
+  constructor(public appRef: ApplicationRef) {}
 
   handleDrop(e) {
       console.log('dropped file');
@@ -59,6 +59,7 @@ export class AppComponent {
       if(files[key].type === "image/png" || files[key].type === "image/jpeg") {
         self.images.push(files[key]);
         console.log(self.images);
+        this.appRef.tick(); // Hack
       }
       else {
         alert("File must be a PNG or JPEG!");
