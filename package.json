@@ -13,10 +13,10 @@
   "devDependencies": {
     "@types/core-js": "0.9.34",
     "@types/electron": "^1.4.27",
-    "@types/node": "6.0.47",
+    "@types/node": "6.0.48",
     "electron-prebuilt": "^1.4.6",
     "ts-loader": "^1.2.1",
-    "typescript": "^2.0.9",
+    "typescript": "^2.0.10",
     "typings": "^2.0.0",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2"
